@@ -70,7 +70,7 @@ export const DevenirSponsor = () => {
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-[#241e3f] border border-white/5 rounded-2xl p-6 sm:p-10 shadow-lg">
           <div className="lg:col-span-7 space-y-6">
             <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight">
-              Associez votre marque au <span className="text-[#aa9a56]">canal de diffusion urbain</span> de référence.
+              Associez votre marque au canal de diffusion urbain de référence.
             </h1>
 
             <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
@@ -105,7 +105,7 @@ export const DevenirSponsor = () => {
         <section className="space-y-10">
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-2xl sm:text-4xl font-black text-white">
-              Un privilège d'impact <span className="text-[#aa9a56]">sur mesure</span>
+              Un privilège d'impact sur mesure
             </h2>
             <p className="text-slate-300 text-sm sm:text-base">
               Le programme Sponsor de TAMTAM est conçu pour les entreprises leader souhaitant dominer leur marché.
@@ -156,7 +156,7 @@ export const DevenirSponsor = () => {
           
           <div className="md:col-span-5 space-y-5">
             <h2 className="text-2xl sm:text-3xl font-black text-white">
-              Échangez avec notre <span className="text-[#aa9a56]">direction commerciale</span>
+              Échangez avec notre direction commerciale
             </h2>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
               Les conditions tarifaires, avantages bilatéraux et modalités d'exclusivité sont transmis sur présentation institutionnelle personnalisée.

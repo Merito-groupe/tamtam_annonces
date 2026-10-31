@@ -13,7 +13,7 @@ export const SloganSection = () => {
             transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
             className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight"
           >
-            Annoncez vos messages là où ils seront <span className="text-[#aa9a56]">vraiment écoutés</span>.
+            Annoncez vos messages là où ils seront vraiment écoutés.
           </motion.h2>
         </div>
 

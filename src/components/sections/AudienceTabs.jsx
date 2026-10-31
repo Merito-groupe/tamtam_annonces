@@ -78,7 +78,7 @@ export const AudienceTabs = ({ onNavigate }) => {
         <div className="lg:col-span-4 flex flex-col justify-between space-y-8 pr-2">
           <div>
             <h2 className="text-3xl sm:text-4xl font-black leading-tight tracking-tight mb-4">
-              L'Écosystème <span className="text-[#aa9a56]">TAMTAM</span>
+              L'Écosystème TAMTAM
             </h2>
             <p className="text-slate-300 text-sm leading-relaxed">
               Sélectionnez votre profil pour découvrir nos offres dédiées et l'impact direct sur votre activité.

@@ -26,9 +26,7 @@ export const LancerCampagne = () => {
               className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight"
             >
               Diffusez vos annonces auprès de +2 500 personnes{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#aa9a56] to-[#d4c585]">
-                quotidiennement
-              </span>.
+              quotidiennement.
             </motion.h1>
 
             <motion.p 
@@ -37,7 +35,7 @@ export const LancerCampagne = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl"
             >
-              Commencez votre campagne marketing dès aujourd'hui en téléchargeant l'application <strong className="text-white font-semibold">TAMTAM Annonces</strong>.
+              Commencez votre campagne marketing dès aujourd'hui en téléchargeant l'application <strong className="font-semibold">TAMTAM Annonces</strong>.
             </motion.p>
 
             {/* Boutons Téléchargement */}
@@ -111,11 +109,11 @@ export const LancerCampagne = () => {
               transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
               className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight"
             >
-              Annoncez vos messages là où ils seront <span className="text-[#aa9a56]">vraiment écoutés</span>.
+              Annoncez vos messages là où ils seront vraiment écoutés.
             </motion.h2>
 
             <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-              Commencez votre campagne marketing dès aujourd'hui en téléchargeant l'application <strong className="text-white font-semibold">TAMTAM Annonces</strong>.
+              Commencez votre campagne marketing dès aujourd'hui en téléchargeant l'application <strong className="font-semibold">TAMTAM Annonces</strong>.
             </p>
             
             {/* Boutons Téléchargement */}
@@ -207,7 +205,7 @@ export const LancerCampagne = () => {
           <div className="md:col-span-7 space-y-5 order-1 md:order-2">
             
             <h2 className="text-2xl sm:text-4xl font-black text-white">
-              C’est quoi <span className="text-[#aa9a56]">TAMTAM</span> ?
+              C’est quoi <span>TAMTAM</span> ?
             </h2>
 
             <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">

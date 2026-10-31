@@ -1,5 +1,6 @@
 import React from 'react';
 import { MaterialIcon } from '../components/ui/MaterialIcon';
+import { BackLink } from '../components/ui/BackLink';
 
 export const ChauffeursPage = ({ onOpenDownloadModal, onBack }) => {
   return (
@@ -7,20 +8,14 @@ export const ChauffeursPage = ({ onOpenDownloadModal, onBack }) => {
       
       {/* En-tête */}
       <div className="flex items-center justify-between border-b border-white/10 pb-6">
-        <button 
-          onClick={onBack}
-          className="flex items-center gap-2 text-xs font-bold text-[#aa9a56] hover:underline"
-        >
-          <MaterialIcon name="arrow_back" className="text-base" />
-          Retour à l'accueil
-        </button>
+        <BackLink onClick={onBack} />
       </div>
 
       {/* HERO SECTION */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
         <div className="md:col-span-7 space-y-6">
           <h1 className="text-3xl sm:text-5xl font-black leading-tight">
-            Transformez votre véhicule en source de <span className="text-[#aa9a56]">revenus passifs</span>
+            Transformez votre véhicule en source de revenus passifs
           </h1>
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
             Installez TAMTAM Driver, connectez l'application au système audio de votre véhicule et gagnez de l'argent à chaque publicité diffusée pendant vos trajets.

@@ -1,5 +1,6 @@
 import React from 'react';
 import { MaterialIcon } from '../components/ui/MaterialIcon';
+import { BackLink } from '../components/ui/BackLink';
 
 export default function AnnonceursDetail({ onNavigate }) {
   return (
@@ -44,12 +45,7 @@ export default function AnnonceursDetail({ onNavigate }) {
         >
           Lancer une campagne
         </button>
-        <button 
-          onClick={() => onNavigate('Home')} 
-          className="border border-white/20 hover:bg-white/10 text-white font-bold px-6 py-4 rounded-xl transition-all"
-        >
-          Retour à l'accueil
-        </button>
+        <BackLink onClick={() => onNavigate('Home')} />
       </div>
     </div>
   );

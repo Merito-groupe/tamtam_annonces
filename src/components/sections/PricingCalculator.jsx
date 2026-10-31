@@ -51,7 +51,7 @@ export const PricingCalculator = ({ onOpenModal }) => {
     <section className="py-16 px-4 sm:px-8 max-w-7xl mx-auto">
       <div className="text-center space-y-3 mb-12">
         <h2 className="text-3xl sm:text-4xl font-black text-white">
-          Simulez votre <span className="text-[#aa9a56]">budget publicitaire</span>
+          Simulez votre budget publicitaire
         </h2>
         <p className="text-slate-300 text-sm max-w-lg mx-auto">
           Calculez instantanément le coût de votre campagne en fonction de la taille de votre flotte et de la durée.

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { MaterialIcon } from "../components/ui/MaterialIcon";
+import { BackLink } from "../components/ui/BackLink";
 
 export const ChauffeursDetailTab = ({ onNavigate }) => {
   useEffect(() => {
@@ -26,18 +27,12 @@ export const ChauffeursDetailTab = ({ onNavigate }) => {
       <div className="max-w-5xl mx-auto space-y-10">
         
         {/* Navigation / Back Button */}
-        <button
-          onClick={handleBack}
-          className="inline-flex items-center gap-2 text-sm font-bold text-[#aa9a56] hover:underline cursor-pointer"
-        >
-          <MaterialIcon name="arrow_back" className="text-lg" />
-          <span>Retour à l'accueil</span>
-        </button>
+        <BackLink onClick={handleBack} />
 
         {/* Header Section */}
         <div className="space-y-4">
           <h1 className="text-3xl sm:text-5xl font-black leading-tight">
-            Pour <span className="text-[#aa9a56]">Chauffeurs & Transporteurs</span>
+            Pour Chauffeurs & Transporteurs
           </h1>
           <p className="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
             Transformez votre véhicule en canal de diffusion. Monétisez chacun de vos trajets quotidiens sans changer vos habitudes de conduite.

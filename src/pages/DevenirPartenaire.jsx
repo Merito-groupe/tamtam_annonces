@@ -18,11 +18,11 @@ export const DevenirPartenaire = () => {
           {/* Bloc Texte & CTA (Gauche) */}
           <div className="lg:col-span-7 space-y-6">
             <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight">
-              Devenez chauffeur partenaire de <span className="text-[#aa9a56]">TAMTAM</span>.
+              Devenez chauffeur partenaire de TAMTAM.
             </h1>
 
             <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-              Rejoignez le réseau officiel des transporteurs partenaires. Intégrez notre réseau de diffusion urbain dès aujourd'hui en téléchargeant l'application <strong className="text-white font-semibold">TAMTAM Chauffeur</strong>.
+              Rejoignez le réseau officiel des transporteurs partenaires. Intégrez notre réseau de diffusion urbain dès aujourd'hui en téléchargeant l'application <strong className="font-semibold">TAMTAM Chauffeur</strong>.
             </p>
 
             {/* Boutons Téléchargement */}
@@ -91,7 +91,7 @@ export const DevenirPartenaire = () => {
               transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
               className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight"
             >
-              Passez de simple conducteur à <span className="text-[#aa9a56]">acteur clé de l'information urbaine</span>.
+              Passez de simple conducteur à acteur clé de l'information urbaine.
             </motion.h2>
           </div>
 

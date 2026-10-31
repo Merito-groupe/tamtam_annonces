@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { MaterialIcon } from '../components/ui/MaterialIcon';
+import { BackLink } from '../components/ui/BackLink';
 
 export const SponsorsDetailTab = ({ onNavigate }) => {
   useEffect(() => {
@@ -37,13 +38,7 @@ export const SponsorsDetailTab = ({ onNavigate }) => {
         
         {/* Navigation / Bouton Retour */}
         <div>
-          <button
-            onClick={handleBack}
-            className="inline-flex items-center gap-2 text-sm font-bold text-[#aa9a56] hover:text-white transition-colors cursor-pointer bg-white/5 px-4 py-2 rounded-full border border-white/10"
-          >
-            <MaterialIcon name="arrow_back" className="text-lg" />
-            <span>Retour à l'accueil</span>
-          </button>
+          <BackLink onClick={handleBack} />
         </div>
 
         {/* SECTION HERO : Invitation à rejoindre les sponsors */}
@@ -51,10 +46,10 @@ export const SponsorsDetailTab = ({ onNavigate }) => {
           <div className="lg:col-span-7 space-y-6">
             
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight">
-              Rejoignez les marques majeures qui dominent l'audio urbain avec <span className="text-[#aa9a56]">Tamtam annonces</span>
+              Rejoignez les marques majeures qui dominent l'audio urbain avec Tamtam annonces
             </h1>
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-              Prenez la parole au cœur de la mobilité quotidienne. En tant que canal de diffusion de publicité audio embarqué dans les transports en commun, Tamtam annonces permet d'atteindre directement <strong className="text-white">plus de 2 500 personnes quotidiennement</strong> pendant leurs trajets urbains.
+              Prenez la parole au cœur de la mobilité quotidienne. En tant que canal de diffusion de publicité audio embarqué dans les transports en commun, Tamtam annonces permet d'atteindre directement <strong>plus de 2 500 personnes quotidiennement</strong> pendant leurs trajets urbains.
             </p>
             <div className="pt-2 flex flex-wrap gap-4">
               <button
@@ -92,7 +87,7 @@ export const SponsorsDetailTab = ({ onNavigate }) => {
         <section className="space-y-10">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <h2 className="text-2xl sm:text-4xl font-black">
-              Pourquoi choisir <span className="text-[#aa9a56]">Tamtam annonces</span> ?
+              Pourquoi choisir Tamtam annonces ?
             </h2>
             <p className="text-slate-300 text-sm sm:text-base">
               Un canal de diffusion de publicité audio conçu pour maximiser l'impact, la répétition et l'ancrage mémoriel auprès de plus de 2 500 passagers quotidiens.

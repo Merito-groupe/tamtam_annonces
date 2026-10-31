@@ -436,11 +436,11 @@ export const AnnonceursDetailTab = ({ onNavigate }) => {
              
             
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight">
-              Prenez la parole directement auprès de vos clients avec <span className="text-[#aa9a56]">Tamtam annonces</span>
+              Prenez la parole directement auprès de vos clients avec Tamtam annonces
             </h1>
             
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-              Diffusion de messages audio captivants dans les transports urbains. Touchez plus de <strong className="text-white font-bold">2 500 passagers au quotidien</strong> pendant leurs déplacements, avec zéro distraction.
+              Diffusion de messages audio captivants dans les transports urbains. Touchez plus de <strong className="font-bold">2 500 passagers au quotidien</strong> pendant leurs déplacements, avec zéro distraction.
             </p>
 
             <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -499,7 +499,7 @@ export const AnnonceursDetailTab = ({ onNavigate }) => {
         <section className="space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <h2 className="text-2xl sm:text-4xl font-black">
-              Pourquoi choisir <span className="text-[#aa9a56]">Tamtam annonces</span> ?
+              Pourquoi choisir Tamtam annonces ?
             </h2>
             <p className="text-slate-300 text-sm sm:text-base">
               Une solution de communication audio pensée pour offrir une visibilité maximale et un fort impact sur votre cible.

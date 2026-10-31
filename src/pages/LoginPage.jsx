@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { MaterialIcon } from '../components/ui/MaterialIcon';
+import { BackLink } from '../components/ui/BackLink';
 
 export const LoginPage = ({ onNavigate }) => {
   const [email, setEmail] = useState('');
@@ -76,13 +77,11 @@ export const LoginPage = ({ onNavigate }) => {
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         
         {/* Bouton retour */}
-        <button
-          type="button"
+        <BackLink
           onClick={() => onNavigate && onNavigate('Home')}
-          className="inline-flex items-center gap-2 text-xs font-semibold text-slate-300 hover:text-[#aa9a56] transition-colors mb-6 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#aa9a56] rounded-md px-1 py-0.5"
-        >
-          ← Retour au site
-        </button>
+          label="Retour au site"
+          className="mb-6"
+        />
 
         {/* Logo et Titre */}
         <div className="text-center">

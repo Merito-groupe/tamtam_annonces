@@ -33,9 +33,7 @@ export const HeroSection = ({ onOpenDownloadModal, onOpenContactModal }) => {
               className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-snug tracking-tight mb-2"
             >
               Ne cherchez plus votre audience.{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#aa9a56] via-[#d4c585] to-white">
-                Parlez-lui directement
-              </span>{' '}
+              Parlez-lui directement{' '}
               là où elle écoute.
             </motion.h1>
 
@@ -131,7 +129,7 @@ export const HeroSection = ({ onOpenDownloadModal, onOpenContactModal }) => {
               transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
               className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#2e274e] leading-tight tracking-tight mb-8"
             >
-              Annoncez vos messages là où ils seront <span className="text-[#aa9a56]">vraiment écoutés</span>.
+              Annoncez vos messages là où ils seront vraiment écoutés.
             </motion.h2>
 
             {/* Boutons Téléchargement */}
@@ -240,7 +238,7 @@ export const HeroSection = ({ onOpenDownloadModal, onOpenContactModal }) => {
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight"
             >
-              C’est quoi <span className="text-[#aa9a56]">TAMTAM</span> ?
+              C’est quoi TAMTAM ?
             </motion.h2>
 
             {/* Texte épuré */}

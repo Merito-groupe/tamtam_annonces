@@ -1,5 +1,5 @@
 import React from 'react';
-import { MaterialIcon } from '../components/ui/MaterialIcon';
+import { BackLink } from '../components/ui/BackLink';
 
 export const PrivacyPage = ({ onNavigate }) => {
   return (
@@ -7,13 +7,11 @@ export const PrivacyPage = ({ onNavigate }) => {
       <div className="max-w-4xl mx-auto">
         {/* En-tête */}
         <div className="mb-10 border-b border-slate-200 pb-6">
-          <button
+          <BackLink
             onClick={() => onNavigate && onNavigate('Home')}
-            className="inline-flex items-center gap-2 text-sm text-[#aa9a56] hover:underline mb-6 font-semibold cursor-pointer"
-          >
-            <MaterialIcon name="arrow_back" className="text-base" />
-            Retour à l'accueil
-          </button>
+            tone="light"
+            className="mb-6"
+          />
           <h1 className="text-3xl sm:text-4xl font-black text-[#2e274e] tracking-tight mb-2">
             Politique de Confidentialité et Suppression de Compte
           </h1>
