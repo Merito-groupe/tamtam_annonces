@@ -15,10 +15,7 @@ export const LoginPage = ({ onNavigate }) => {
   const recaptchaRef = useRef(null);
 
   // Récupération de la clé de site v2 (compatible Vite & Create React App)
-  const SITE_KEY = 
-    (typeof process !== 'undefined' && process.env?.REACT_APP_RECAPTCHA_SITE_KEY) || 
-    (typeof import.meta !== 'undefined' && import.meta.env?.VITE_RECAPTCHA_SITE_KEY) || 
-    '6LeieYktAAAAAKHrRKH1TARDrIW10aKFhFF-UrJY';
+  const SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 
   const resetCaptcha = () => {
     recaptchaRef.current?.reset();

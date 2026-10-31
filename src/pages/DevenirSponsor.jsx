@@ -27,33 +27,67 @@ export const DevenirSponsor = () => {
     }));
   };
 
+  // Validation et nettoyage des champs avant envoi
+  const validateForm = (data) => {
+    const clean = {
+      company_name: data.company_name.trim(),
+      sector: data.sector.trim(),
+      contact_name: data.contact_name.trim(),
+      phone: data.phone.trim(),
+      email: data.email.trim().toLowerCase(),
+      message: data.message.trim(),
+    };
+
+    if (clean.company_name.length < 2) {
+      return { error: "Le nom de l'entreprise est trop court." };
+    }
+    if (clean.sector.length < 2) {
+      return { error: "Le secteur d'activité est trop court." };
+    }
+    if (clean.contact_name.length < 2) {
+      return { error: 'Le nom du responsable est trop court.' };
+    }
+    if (!/^[+0-9 ().-]{6,20}$/.test(clean.phone)) {
+      return { error: 'Le numéro de téléphone est invalide.' };
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(clean.email)) {
+      return { error: "L'adresse e-mail est invalide." };
+    }
+    if (clean.message.length > 2000) {
+      return { error: 'Le message est trop long (2000 caractères maximum).' };
+    }
+
+    return { data: clean };
+  };
+
   // Envoi des données vers Supabase
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
     setErrorMessage('');
+
+    const { data: clean, error: validationError } = validateForm(formData);
+    if (validationError) {
+      setErrorMessage(validationError);
+      return;
+    }
+
+    setLoading(true);
 
     try {
       // Insertion dans la table Supabase 'sponsor_requests'
-      const { data, error } = await supabase
+      // created_at n'est pas envoyé : la base le renseigne elle-même.
+      const { error } = await supabase
         .from('sponsor_requests')
-        .insert([
-          {
-            company_name: formData.company_name,
-            sector: formData.sector,
-            contact_name: formData.contact_name,
-            phone: formData.phone,
-            email: formData.email,
-            message: formData.message,
-            created_at: new Date()
-          }
-        ]);
+        .insert([clean]);
 
       if (error) throw error;
 
       setSubmitted(true);
     } catch (error) {
-      console.error('Erreur Supabase :', error);
+      // On ne journalise jamais l'objet d'erreur complet (schéma, contraintes).
+      if (import.meta.env.DEV) {
+        console.error('Erreur Supabase :', error?.message);
+      }
       setErrorMessage("Une erreur est survenue lors de l'envoi. Veuillez réessayer.");
     } finally {
       setLoading(false);
@@ -200,6 +234,7 @@ export const DevenirSponsor = () => {
                       value={formData.company_name}
                       onChange={handleChange}
                       required 
+                      maxLength={120}
                       placeholder="ex: Votre Société"
                       className="w-full bg-[#241e3f] border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-[#aa9a56]"
                     />
@@ -212,6 +247,7 @@ export const DevenirSponsor = () => {
                       value={formData.sector}
                       onChange={handleChange}
                       required 
+                      maxLength={120}
                       placeholder="ex: Agroalimentaire, Banque..."
                       className="w-full bg-[#241e3f] border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-[#aa9a56]"
                     />
@@ -227,6 +263,7 @@ export const DevenirSponsor = () => {
                       value={formData.contact_name}
                       onChange={handleChange}
                       required 
+                      maxLength={120}
                       placeholder="Votre nom complet"
                       className="w-full bg-[#241e3f] border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-[#aa9a56]"
                     />
@@ -239,6 +276,9 @@ export const DevenirSponsor = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       required 
+                      maxLength={20}
+                      pattern="[+0-9 ().-]{6,20}"
+                      title="6 à 20 caractères : chiffres, espaces, + ( ) . -"
                       placeholder="+243..."
                       className="w-full bg-[#241e3f] border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-[#aa9a56]"
                     />
@@ -253,6 +293,7 @@ export const DevenirSponsor = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required 
+                    maxLength={160}
                     placeholder="direction@entreprise.com"
                     className="w-full bg-[#241e3f] border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-[#aa9a56]"
                   />
@@ -265,6 +306,7 @@ export const DevenirSponsor = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
+                    maxLength={2000}
                     placeholder="Saisissez votre demande..."
                     className="w-full bg-[#241e3f] border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-[#aa9a56]"
                   ></textarea>
