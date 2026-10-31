@@ -12,7 +12,6 @@ export const AudienceTabs = ({ onNavigate }) => {
   const cards = [
     {
       id: 'annonceurs',
-      badge: 'TAMTAM Annonces',
       title: 'Pour les Annonceurs & PME',
       desc: 'Diffusez vos messages directement dans la cabine des véhicules et touchez une audience captive sans saut de pub.',
       image: '/section2-listen.png',
@@ -21,7 +20,6 @@ export const AudienceTabs = ({ onNavigate }) => {
     },
     {
       id: 'chauffeurs',
-      badge: 'TAMTAM Driver',
       title: 'Pour Chauffeurs & Transporteurs',
       desc: 'Monétisez chaque trajet en diffusant des publicités audio. Mode hors-ligne et retraits instantanés.',
       image: '/driver-hero.jpg',
@@ -30,7 +28,6 @@ export const AudienceTabs = ({ onNavigate }) => {
     },
     {
       id: 'sponsors',
-      badge: ' ',
       title: 'Sponsors & Partenaires',
       desc: 'Prenez l’exclusivité sectorielle sur l’ensemble de notre flotte urbaine active (0.60 $ / jour / véhicule).',
       image: '/sponsor-banner.jpg',
@@ -94,7 +91,7 @@ export const AudienceTabs = ({ onNavigate }) => {
               onClick={() => handleRedirect(activeCard)}
               className="inline-flex items-center gap-3 border-2 border-[#aa9a56] bg-[#aa9a56]/10 hover:bg-[#aa9a56] text-white hover:text-[#2e274e] px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 group cursor-pointer"
             >
-              <span>Découvrir {activeCard.badge}</span>
+              <span>Découvrir l'offre</span>
               <MaterialIcon name="north_east" className="text-base group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </button>
           </div>
@@ -132,9 +129,6 @@ export const AudienceTabs = ({ onNavigate }) => {
                           e.target.src = "https://via.placeholder.com/400x250/2e274e/aa9a56?text=TAMTAM";
                         }}
                       />
-                      <span className="absolute top-3 left-3 bg-[#2e274e]/90 text-[#aa9a56] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-md">
-                        {card.badge}
-                      </span>
                     </div>
 
                     <h3 className="text-lg font-bold leading-snug mb-2 text-[#2e274e]">

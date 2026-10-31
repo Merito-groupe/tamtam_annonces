@@ -1,5 +1,5 @@
 import React from 'react';
-import { MaterialIcon } from '../ui/MaterialIcon';
+import { MaterialIcon } from '../components/ui/MaterialIcon';
 
 export const ChauffeursPage = ({ onOpenDownloadModal, onBack }) => {
   return (
@@ -14,10 +14,6 @@ export const ChauffeursPage = ({ onOpenDownloadModal, onBack }) => {
           <MaterialIcon name="arrow_back" className="text-base" />
           Retour à l'accueil
         </button>
-
-        <span className="px-3 py-1 bg-[#aa9a56]/20 border border-[#aa9a56]/40 text-[#aa9a56] text-xs font-bold rounded-full uppercase">
-          Espace Chauffeurs
-        </span>
       </div>
 
       {/* HERO SECTION */}

@@ -114,30 +114,36 @@ export const DevenirSponsor = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-[#241e3f] border border-white/5 rounded-2xl p-6 space-y-4">
-              <div className="p-3 rounded-xl bg-[#aa9a56]/10 text-[#aa9a56] w-fit">
-                <MaterialIcon name="verified_user" className="text-3xl" />
+              <div className="flex items-center gap-3">
+                <div className="p-3 shrink-0 rounded-xl bg-[#aa9a56]/10 text-[#aa9a56]">
+                  <MaterialIcon name="verified_user" className="text-3xl" />
+                </div>
+                <h3 className="min-w-0 text-lg font-bold text-white">Exclusivité Totale</h3>
               </div>
-              <h3 className="text-lg font-bold text-white">Exclusivité Totale</h3>
               <p className="text-sm text-slate-300 leading-relaxed">
                 Aucun concurrent direct de votre secteur d'activité ne peut diffuser sur la plateforme durant toute la durée de la convention.
               </p>
             </div>
 
             <div className="bg-[#241e3f] border border-white/5 rounded-2xl p-6 space-y-4">
-              <div className="p-3 rounded-xl bg-[#aa9a56]/10 text-[#aa9a56] w-fit">
-                <MaterialIcon name="campaign" className="text-3xl" />
+              <div className="flex items-center gap-3">
+                <div className="p-3 shrink-0 rounded-xl bg-[#aa9a56]/10 text-[#aa9a56]">
+                  <MaterialIcon name="campaign" className="text-3xl" />
+                </div>
+                <h3 className="min-w-0 text-lg font-bold text-white">Priorité de Diffusion</h3>
               </div>
-              <h3 className="text-lg font-bold text-white">Priorité de Diffusion</h3>
               <p className="text-sm text-slate-300 leading-relaxed">
                 Vos messages sont diffusés en priorité sur l'intégralité de la flotte de véhicules partenaires.
               </p>
             </div>
 
             <div className="bg-[#241e3f] border border-white/5 rounded-2xl p-6 space-y-4">
-              <div className="p-3 rounded-xl bg-[#aa9a56]/10 text-[#aa9a56] w-fit">
-                <MaterialIcon name="groups" className="text-3xl" />
+              <div className="flex items-center gap-3">
+                <div className="p-3 shrink-0 rounded-xl bg-[#aa9a56]/10 text-[#aa9a56]">
+                  <MaterialIcon name="groups" className="text-3xl" />
+                </div>
+                <h3 className="min-w-0 text-lg font-bold text-white">Audience Captive</h3>
               </div>
-              <h3 className="text-lg font-bold text-white">Audience Captive</h3>
               <p className="text-sm text-slate-300 leading-relaxed">
                 Touchez quotidiennement des milliers de passagers attentifs tout au long de leurs trajets urbains.
               </p>

@@ -508,30 +508,36 @@ export const AnnonceursDetailTab = ({ onNavigate }) => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white/5 border border-white/10 p-8 rounded-3xl space-y-4 hover:border-[#aa9a56]/50 transition-all hover:-translate-y-1">
-              <div className="w-14 h-14 rounded-2xl bg-[#aa9a56]/20 flex items-center justify-center text-[#aa9a56]">
-                <MaterialIcon name="volume_up" className="text-3xl" />
+              <div className="flex items-center gap-3">
+                <div className="w-14 h-14 shrink-0 rounded-2xl bg-[#aa9a56]/20 flex items-center justify-center text-[#aa9a56]">
+                  <MaterialIcon name="volume_up" className="text-3xl" />
+                </div>
+                <h3 className="min-w-0 text-xl font-bold">100% d'Écoute Captive</h3>
               </div>
-              <h3 className="text-xl font-bold">100% d'Écoute Captive</h3>
               <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
                 Les passagers sont installés confortablement tout au long du trajet. Votre message est écouté sans zapping ni interruption.
               </p>
             </div>
 
             <div className="bg-white/5 border border-white/10 p-8 rounded-3xl space-y-4 hover:border-[#aa9a56]/50 transition-all hover:-translate-y-1">
-              <div className="w-14 h-14 rounded-2xl bg-[#aa9a56]/20 flex items-center justify-center text-[#aa9a56]">
-                <MaterialIcon name="location_on" className="text-3xl" />
+              <div className="flex items-center gap-3">
+                <div className="w-14 h-14 shrink-0 rounded-2xl bg-[#aa9a56]/20 flex items-center justify-center text-[#aa9a56]">
+                  <MaterialIcon name="location_on" className="text-3xl" />
+                </div>
+                <h3 className="min-w-0 text-xl font-bold">Ciblage Géographique</h3>
               </div>
-              <h3 className="text-xl font-bold">Ciblage Géographique</h3>
               <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
                 Programmez vos diffusions en fonction des lignes de transport, des quartiers ciblés et des créneaux horaires les plus stratégiques.
               </p>
             </div>
 
             <div className="bg-white/5 border border-white/10 p-8 rounded-3xl space-y-4 hover:border-[#aa9a56]/50 transition-all hover:-translate-y-1">
-              <div className="w-14 h-14 rounded-2xl bg-[#aa9a56]/20 flex items-center justify-center text-[#aa9a56]">
-                <MaterialIcon name="analytics" className="text-3xl" />
+              <div className="flex items-center gap-3">
+                <div className="w-14 h-14 shrink-0 rounded-2xl bg-[#aa9a56]/20 flex items-center justify-center text-[#aa9a56]">
+                  <MaterialIcon name="analytics" className="text-3xl" />
+                </div>
+                <h3 className="min-w-0 text-xl font-bold">Rapports & Certification</h3>
               </div>
-              <h3 className="text-xl font-bold">Rapports & Certification</h3>
               <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
                 Accédez à des statistiques précises et vérifiables sur le nombre de diffusions effectuées et l'estimation de l'audience touchée.
               </p>
@@ -646,7 +652,6 @@ export const AnnonceursDetailTab = ({ onNavigate }) => {
     {/* Étapes du processus */}
     <div className="lg:col-span-7 space-y-8">
       <div className="space-y-3">
-        <span className="text-[#aa9a56] font-bold text-xs uppercase tracking-widest">Processus Simple & Rapide</span>
         <h2 className="text-2xl sm:text-4xl font-black">Comment ça marche ?</h2>
         <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
           Lancer votre campagne sur le canal de diffusion Tamtam ne prend que quelques étapes depuis votre téléphone.

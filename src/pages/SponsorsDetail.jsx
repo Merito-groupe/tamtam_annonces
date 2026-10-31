@@ -5,9 +5,6 @@ export default function SponsorsDetail({ onNavigate }) {
   return (
     <div className="max-w-6xl mx-auto px-6 py-16">
       <div className="mb-8">
-        <span className="bg-[#aa9a56]/20 text-[#aa9a56] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
-          Grands Comptes
-        </span>
         <h1 className="text-4xl sm:text-5xl font-black mt-4 mb-6">
           Sponsors & Partenaires
         </h1>
@@ -18,18 +15,24 @@ export default function SponsorsDetail({ onNavigate }) {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-          <MaterialIcon name="verified" className="text-3xl text-[#aa9a56] mb-4" />
-          <h3 className="text-lg font-bold mb-2">Exclusivité Sectorielle</h3>
+          <div className="flex items-center gap-3 mb-4">
+            <MaterialIcon name="verified" className="shrink-0 text-3xl text-[#aa9a56]" />
+            <h3 className="min-w-0 text-lg font-bold">Exclusivité Sectorielle</h3>
+          </div>
           <p className="text-sm text-slate-300">Soyez le seul marqueur de votre secteur d'activité sur notre réseau.</p>
         </div>
         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-          <MaterialIcon name="directions_car" className="text-3xl text-[#aa9a56] mb-4" />
-          <h3 className="text-lg font-bold mb-2">Flotte Complète</h3>
+          <div className="flex items-center gap-3 mb-4">
+            <MaterialIcon name="directions_car" className="shrink-0 text-3xl text-[#aa9a56]" />
+            <h3 className="min-w-0 text-lg font-bold">Flotte Complète</h3>
+          </div>
           <p className="text-sm text-slate-300">Couverture maximale sur l'ensemble des véhicules urbains actifs.</p>
         </div>
         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-          <MaterialIcon name="sell" className="text-3xl text-[#aa9a56] mb-4" />
-          <h3 className="text-lg font-bold mb-2">Tarif Préférentiel</h3>
+          <div className="flex items-center gap-3 mb-4">
+            <MaterialIcon name="sell" className="shrink-0 text-3xl text-[#aa9a56]" />
+            <h3 className="min-w-0 text-lg font-bold">Tarif Préférentiel</h3>
+          </div>
           <p className="text-sm text-slate-300">Tarification avantageuse fixée à 0.60 $ / jour par véhicule.</p>
         </div>
       </div>

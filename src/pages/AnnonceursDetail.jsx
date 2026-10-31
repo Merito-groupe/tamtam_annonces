@@ -5,9 +5,6 @@ export default function AnnonceursDetail({ onNavigate }) {
   return (
     <div className="max-w-6xl mx-auto px-6 py-16">
       <div className="mb-8">
-        <span className="bg-[#aa9a56]/20 text-[#aa9a56] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
-          TAMTAM Annonces
-        </span>
         <h1 className="text-4xl sm:text-5xl font-black mt-4 mb-6">
           Pour les Annonceurs & PME
         </h1>
@@ -18,18 +15,24 @@ export default function AnnonceursDetail({ onNavigate }) {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-          <MaterialIcon name="campaign" className="text-3xl text-[#aa9a56] mb-4" />
-          <h3 className="text-lg font-bold mb-2">Audience Captive</h3>
+          <div className="flex items-center gap-3 mb-4">
+            <MaterialIcon name="campaign" className="shrink-0 text-3xl text-[#aa9a56]" />
+            <h3 className="min-w-0 text-lg font-bold">Audience Captive</h3>
+          </div>
           <p className="text-sm text-slate-300">Vos spots sont écoutés sans interruption pendant la durée des trajets.</p>
         </div>
         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-          <MaterialIcon name="location_on" className="text-3xl text-[#aa9a56] mb-4" />
-          <h3 className="text-lg font-bold mb-2">Ciblage Géographique</h3>
+          <div className="flex items-center gap-3 mb-4">
+            <MaterialIcon name="location_on" className="shrink-0 text-3xl text-[#aa9a56]" />
+            <h3 className="min-w-0 text-lg font-bold">Ciblage Géographique</h3>
+          </div>
           <p className="text-sm text-slate-300">Ciblez précisément les zones urbaines et axes stratégiques de votre choix.</p>
         </div>
         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-          <MaterialIcon name="analytics" className="text-3xl text-[#aa9a56] mb-4" />
-          <h3 className="text-lg font-bold mb-2">Statistiques en direct</h3>
+          <div className="flex items-center gap-3 mb-4">
+            <MaterialIcon name="analytics" className="shrink-0 text-3xl text-[#aa9a56]" />
+            <h3 className="min-w-0 text-lg font-bold">Statistiques en direct</h3>
+          </div>
           <p className="text-sm text-slate-300">Suivez le nombre de diffusions et l'audience atteinte en temps réel.</p>
         </div>
       </div>

@@ -17,15 +17,13 @@ export const AppDownloadModal = ({ isOpen, onClose, appType = 'annonces' }) => {
       title: 'TAMTAM Annonces',
       subtitle: 'Lancez vos spots publicitaires et touchez des milliers de passagers au quotidien.',
       playLink: playStoreLinks.annonces,
-      qrCodeUrl: `https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(playStoreLinks.annonces)}&color=2e274e&bgcolor=ffffff`,
-      target: 'Pour Entreprises & Annoceurs'
+      qrCodeUrl: `https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(playStoreLinks.annonces)}&color=2e274e&bgcolor=ffffff`
     },
     driver: {
       title: 'TAMTAM Driver',
       subtitle: 'Transformez vos trajets en revenus passifs en diffusant des publicités dans votre véhicule.',
       playLink: playStoreLinks.driver,
-      qrCodeUrl: `https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(playStoreLinks.driver)}&color=2e274e&bgcolor=ffffff`,
-      target: 'Pour Chauffeurs de Taxis & Bus'
+      qrCodeUrl: `https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(playStoreLinks.driver)}&color=2e274e&bgcolor=ffffff`
     }
   };
 
@@ -78,9 +76,6 @@ export const AppDownloadModal = ({ isOpen, onClose, appType = 'annonces' }) => {
 
             {/* En-tête */}
             <div className="text-center mt-2">
-              <span className="inline-block px-3 py-1 bg-[#aa9a56]/20 border border-[#aa9a56]/40 text-[#aa9a56] text-xs font-semibold rounded-full mb-3">
-                {currentApp.target}
-              </span>
               <h3 className="text-xl font-bold text-white mb-1">{currentApp.title}</h3>
               <p className="text-slate-300 text-sm mb-5">{currentApp.subtitle}</p>
 

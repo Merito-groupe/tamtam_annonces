@@ -1,5 +1,5 @@
 import React from 'react';
-import { MaterialIcon } from '../ui/MaterialIcon';
+import { MaterialIcon } from '../components/ui/MaterialIcon';
 
 export const SponsorsPage = ({ onBack }) => {
   return (
@@ -14,16 +14,11 @@ export const SponsorsPage = ({ onBack }) => {
           <MaterialIcon name="arrow_back" className="text-base" />
           Retour à l'accueil
         </button>
-
-        <span className="px-3 py-1 bg-[#aa9a56]/20 border border-[#aa9a56]/40 text-[#aa9a56] text-xs font-bold rounded-full uppercase">
-          Offre Corporate & Sponsors
-        </span>
       </div>
 
       {/* HERO SECTION ASYMÉTRIQUE */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         <div className="lg:col-span-7 space-y-6">
-          <span className="text-[#aa9a56] text-xs font-bold uppercase tracking-widest">Exclusivité Flotte Totale</span>
           <h1 className="text-3xl sm:text-5xl font-black leading-tight">
             Dominez votre secteur sur l'ensemble de la <span className="text-[#aa9a56]">ville</span>
           </h1>

@@ -102,40 +102,48 @@ export const SponsorsDetailTab = ({ onNavigate }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
             <div className="bg-white/5 border border-white/10 p-8 rounded-3xl space-y-4 hover:border-[#aa9a56]/50 transition-all hover:-translate-y-1">
-              <div className="w-14 h-14 rounded-2xl bg-[#aa9a56]/20 flex items-center justify-center text-[#aa9a56]">
-                <MaterialIcon name="card_giftcard" className="text-3xl" />
+              <div className="flex items-center gap-3">
+                <div className="w-14 h-14 shrink-0 rounded-2xl bg-[#aa9a56]/20 flex items-center justify-center text-[#aa9a56]">
+                  <MaterialIcon name="card_giftcard" className="text-3xl" />
+                </div>
+                <h3 className="min-w-0 text-xl font-bold">Période d'Exonération Initiale</h3>
               </div>
-              <h3 className="text-xl font-bold">Période d'Exonération Initiale</h3>
               <p className="text-slate-300 text-sm leading-relaxed">
                 Profitez d'une gratuité totale (0,00 $ USD) sur les frais de diffusion durant toute la période contractuelle de sponsoring d'amorçage.
               </p>
             </div>
 
             <div className="bg-white/5 border border-white/10 p-8 rounded-3xl space-y-4 hover:border-[#aa9a56]/50 transition-all hover:-translate-y-1">
-              <div className="w-14 h-14 rounded-2xl bg-[#aa9a56]/20 flex items-center justify-center text-[#aa9a56]">
-                <MaterialIcon name="percent" className="text-3xl" />
+              <div className="flex items-center gap-3">
+                <div className="w-14 h-14 shrink-0 rounded-2xl bg-[#aa9a56]/20 flex items-center justify-center text-[#aa9a56]">
+                  <MaterialIcon name="percent" className="text-3xl" />
+                </div>
+                <h3 className="min-w-0 text-xl font-bold">Avantage Tarifaire Garanti (-20 %)</h3>
               </div>
-              <h3 className="text-xl font-bold">Avantage Tarifaire Garanti (-20 %)</h3>
               <p className="text-slate-300 text-sm leading-relaxed">
                 À l'issue de la gratuité, continuez à diffuser vos spots audio avec une réduction préférentielle garantie de -20 % sur l'ensemble de vos campagnes.
               </p>
             </div>
 
             <div className="bg-white/5 border border-white/10 p-8 rounded-3xl space-y-4 hover:border-[#aa9a56]/50 transition-all hover:-translate-y-1">
-              <div className="w-14 h-14 rounded-2xl bg-[#aa9a56]/20 flex items-center justify-center text-[#aa9a56]">
-                <MaterialIcon name="volume_up" className="text-3xl" />
+              <div className="flex items-center gap-3">
+                <div className="w-14 h-14 shrink-0 rounded-2xl bg-[#aa9a56]/20 flex items-center justify-center text-[#aa9a56]">
+                  <MaterialIcon name="volume_up" className="text-3xl" />
+                </div>
+                <h3 className="min-w-0 text-xl font-bold">Diffusion Audio Prioritaire</h3>
               </div>
-              <h3 className="text-xl font-bold">Diffusion Audio Prioritaire</h3>
               <p className="text-slate-300 text-sm leading-relaxed">
                 Vos messages bénéficient d'un passage prioritaire à l'antenne sur toute la flotte active pour capter l'attention captive des passagers.
               </p>
             </div>
 
             <div className="bg-white/5 border border-white/10 p-8 rounded-3xl space-y-4 hover:border-[#aa9a56]/50 transition-all hover:-translate-y-1">
-              <div className="w-14 h-14 rounded-2xl bg-[#aa9a56]/20 flex items-center justify-center text-[#aa9a56]">
-                <MaterialIcon name="verified" className="text-3xl" />
+              <div className="flex items-center gap-3">
+                <div className="w-14 h-14 shrink-0 rounded-2xl bg-[#aa9a56]/20 flex items-center justify-center text-[#aa9a56]">
+                  <MaterialIcon name="verified" className="text-3xl" />
+                </div>
+                <h3 className="min-w-0 text-xl font-bold">Option Exclusivité Sectorielle</h3>
               </div>
-              <h3 className="text-xl font-bold">Option Exclusivité Sectorielle</h3>
               <p className="text-slate-300 text-sm leading-relaxed">
                 Selon la formule choisie, obtenez le verrouillage complet de votre secteur d'activité pour empêcher la diffusion de marques concurrentes.
               </p>
@@ -148,7 +156,6 @@ export const SponsorsDetailTab = ({ onNavigate }) => {
         <section className="bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-12 space-y-10 relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-4">
-              <span className="text-[#aa9a56] font-bold text-xs uppercase tracking-widest">Processus Partenaire</span>
               <h2 className="text-2xl sm:text-4xl font-black">Comment ça marche ?</h2>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
                 Un sponsor est un partenaire stratégique qui investit dans l'amorçage du réseau Tamtam annonces afin de s'assurer une présence audio prioritaire et des conditions préférentielles. Le processus s'articule en 3 étapes :

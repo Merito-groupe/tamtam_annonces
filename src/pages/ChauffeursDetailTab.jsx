@@ -36,9 +36,6 @@ export const ChauffeursDetailTab = ({ onNavigate }) => {
 
         {/* Header Section */}
         <div className="space-y-4">
-          <span className="bg-[#aa9a56]/20 text-[#aa9a56] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#aa9a56]/30">
-            TAMTAM Driver
-          </span>
           <h1 className="text-3xl sm:text-5xl font-black leading-tight">
             Pour <span className="text-[#aa9a56]">Chauffeurs & Transporteurs</span>
           </h1>
@@ -63,24 +60,30 @@ export const ChauffeursDetailTab = ({ onNavigate }) => {
         {/* Key Points Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
           <div className="bg-white/5 border border-white/10 p-6 rounded-2xl space-y-3">
-            <MaterialIcon name="monetization_on" className="text-3xl text-[#aa9a56]" />
-            <h3 className="text-lg font-bold">Revenus Complémentaires</h3>
+            <div className="flex items-center gap-3">
+              <MaterialIcon name="monetization_on" className="shrink-0 text-3xl text-[#aa9a56]" />
+              <h3 className="min-w-0 text-lg font-bold">Revenus Complémentaires</h3>
+            </div>
             <p className="text-xs text-slate-300 leading-relaxed">
               Gagnez de l'argent automatiquement à chaque publicité lue pendant vos trajets urbains.
             </p>
           </div>
 
           <div className="bg-white/5 border border-white/10 p-6 rounded-2xl space-y-3">
-            <MaterialIcon name="wifi_off" className="text-3xl text-[#aa9a56]" />
-            <h3 className="text-lg font-bold">Mode Hors-Ligne</h3>
+            <div className="flex items-center gap-3">
+              <MaterialIcon name="wifi_off" className="shrink-0 text-3xl text-[#aa9a56]" />
+              <h3 className="min-w-0 text-lg font-bold">Mode Hors-Ligne</h3>
+            </div>
             <p className="text-xs text-slate-300 leading-relaxed">
               L'application fonctionne même sans connexion Internet permanente dans votre zone de transport.
             </p>
           </div>
 
           <div className="bg-white/5 border border-white/10 p-6 rounded-2xl space-y-3">
-            <MaterialIcon name="account_balance_wallet" className="text-3xl text-[#aa9a56]" />
-            <h3 className="text-lg font-bold">Retraits Instantanés</h3>
+            <div className="flex items-center gap-3">
+              <MaterialIcon name="account_balance_wallet" className="shrink-0 text-3xl text-[#aa9a56]" />
+              <h3 className="min-w-0 text-lg font-bold">Retraits Instantanés</h3>
+            </div>
             <p className="text-xs text-slate-300 leading-relaxed">
               Transférez vos gains directement vers votre compte Mobile Money rapidement et en toute sécurité.
             </p>

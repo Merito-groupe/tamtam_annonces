@@ -50,9 +50,6 @@ export const PricingCalculator = ({ onOpenModal }) => {
   return (
     <section className="py-16 px-4 sm:px-8 max-w-7xl mx-auto">
       <div className="text-center space-y-3 mb-12">
-        <span className="px-3 py-1 bg-[#aa9a56]/20 border border-[#aa9a56]/30 text-[#aa9a56] text-xs font-semibold rounded-full">
-          Tarification Transparente
-        </span>
         <h2 className="text-3xl sm:text-4xl font-black text-white">
           Simulez votre <span className="text-[#aa9a56]">budget publicitaire</span>
         </h2>
