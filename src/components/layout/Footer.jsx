@@ -274,7 +274,7 @@ export const Footer = ({ onNavigate, onTabChange }) => {
           <button
             type="button"
             onClick={() => {
-              window.location.href = 'https://monitoring.tamtam-annonces.com/login'; 
+              window.location.href = 'https://monitorings.tamtam-annonces.com/login'; 
             }}
             className="text-slate-400 hover:text-slate-600 transition-colors cursor-pointer text-[11px]"
             title="Connexion membre"
