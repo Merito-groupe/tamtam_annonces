@@ -1,0 +1,197 @@
+/* ==========================================================================
+   PartnersOrbit — orbites de logos partenaires
+   ========================================================================== */
+
+.po-root {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1 / 1;
+  margin-inline: auto;
+  container-type: size;
+  /* Repli si les unités de conteneur ne sont pas supportées */
+  --po-tile-size: 54px;
+  /* Pastille proportionnelle au conteneur : pas de débordement possible */
+  --po-tile-size: 16cqw;
+}
+
+@media (min-width: 640px) {
+  .po-root {
+    max-width: 440px;
+  }
+}
+
+/* Halo doré derrière le système */
+.po-glow {
+  position: absolute;
+  inset: 8%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(170, 154, 86, 0.16) 0%,
+    rgba(170, 154, 86, 0) 70%
+  );
+  pointer-events: none;
+}
+
+/* Une orbite = un carré centré, plus petit que le conteneur */
+.po-orbit {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
+/* Le cercle fin doré (statique) */
+.po-ring-border {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(170, 154, 86, 0.22);
+  pointer-events: none;
+}
+
+/* Le calque qui tourne, avec les logos dedans */
+.po-ring {
+  position: absolute;
+  inset: 0;
+}
+
+/* Chaque logo est posé sur le cercle via une rotation statique */
+.po-item {
+  position: absolute;
+  inset: 0;
+}
+
+.po-anchor {
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+
+/* Pastille circulaire : fond sombre de la charte + fine bordure dorée */
+.po-tile {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--po-tile-size);
+  height: var(--po-tile-size);
+  margin-left: calc(var(--po-tile-size) / -2);
+  margin-top: calc(var(--po-tile-size) / -2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #241e3f;
+  border: 1px solid rgba(170, 154, 86, 0.55);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.po-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 12%;
+}
+
+.po-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(170, 154, 86, 0.75);
+  font-size: calc(var(--po-tile-size) * 0.5);
+  line-height: 1;
+}
+
+/* « Soleil » central */
+.po-sun {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 24%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #241e3f;
+  border: 1px solid rgba(170, 154, 86, 0.6);
+  box-shadow: 0 0 26px rgba(170, 154, 86, 0.28);
+}
+
+.po-sun-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 14%;
+}
+
+/* ---------------------------------------------------------------- Animations */
+
+@keyframes po-spin-cw {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes po-spin-ccw {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Contre-rotation : annule l'angle statique puis la rotation de l'orbite */
+@keyframes po-counter-cw {
+  from {
+    transform: rotate(calc(-1 * var(--po-angle)));
+  }
+  to {
+    transform: rotate(calc(-1 * var(--po-angle) - 360deg));
+  }
+}
+
+@keyframes po-counter-ccw {
+  from {
+    transform: rotate(calc(-1 * var(--po-angle)));
+  }
+  to {
+    transform: rotate(calc(-1 * var(--po-angle) + 360deg));
+  }
+}
+
+.po-ring--cw {
+  animation: po-spin-cw var(--po-duration, 40s) linear infinite;
+}
+
+.po-ring--ccw {
+  animation: po-spin-ccw var(--po-duration, 40s) linear infinite;
+}
+
+.po-tile--cw {
+  animation: po-counter-cw var(--po-duration, 40s) linear infinite;
+}
+
+.po-tile--ccw {
+  animation: po-counter-ccw var(--po-duration, 40s) linear infinite;
+}
+
+/* Pause au survol du bloc */
+.po-root:hover .po-ring,
+.po-root:hover .po-tile {
+  animation-play-state: paused;
+}
+
+/* Accessibilité : aucune rotation si l'utilisateur la refuse */
+@media (prefers-reduced-motion: reduce) {
+  .po-ring,
+  .po-tile {
+    animation: none !important;
+  }
+}

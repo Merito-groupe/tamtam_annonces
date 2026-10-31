@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { MaterialIcon } from "../components/ui/MaterialIcon";
+import { PartnersOrbit } from "../components/sections/PartnersOrbit";
 import { supabase } from '../services/supabase'; // Ajustez le chemin vers votre client Supabase
 
 export const DevenirSponsor = () => {
@@ -88,16 +88,8 @@ export const DevenirSponsor = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-5 flex justify-center items-center [perspective:1000px]">
-            <motion.div
-              whileHover={{ rotateY: 12, rotateX: -6, scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 200, damping: 15 }}
-              className="w-full max-w-sm bg-[#2e274e]/80 border border-[#aa9a56]/30 rounded-2xl p-8 text-center shadow-2xl [transform-style:preserve-3d]"
-            >
-              <div className="w-20 h-20 mx-auto rounded-full bg-[#aa9a56]/20 border border-[#aa9a56]/50 flex items-center justify-center text-[#aa9a56] mb-4">
-                <MaterialIcon name="workspace_premium" className="text-5xl" />
-              </div>
-            </motion.div>
+          <div className="lg:col-span-5 flex justify-center items-center py-6">
+            <PartnersOrbit />
           </div>
         </section>
 
