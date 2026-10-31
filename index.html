@@ -3,12 +3,113 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo-tamtam.png" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tamtam |Annoncez vos messages là où ils seront vraiment écoutés</title>
+    <style>
+      /* Écran de démarrage affiché avant même le chargement de React :
+         on ne montre jamais la page à moitié rendue (ni les noms d'icônes). */
+      html,
+      body {
+        margin: 0;
+        background-color: #2e274e;
+      }
+
+      #boot-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 22px;
+        background-color: #2e274e;
+        color: #ffffff;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.4s ease, visibility 0.4s ease;
+      }
+
+      #boot-loader.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      #boot-loader .boot-logo {
+        width: 96px;
+        height: auto;
+        animation: boot-pulse 1.6s ease-in-out infinite;
+      }
+
+      #boot-loader .boot-spinner {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        border: 3px solid rgba(170, 154, 86, 0.25);
+        border-top-color: #aa9a56;
+        animation: boot-spin 0.9s linear infinite;
+      }
+
+      #boot-loader .boot-text {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        color: #aa9a56;
+      }
+
+      @keyframes boot-spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes boot-pulse {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(0.94);
+          opacity: 0.85;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        #boot-loader .boot-logo,
+        #boot-loader .boot-spinner {
+          animation: none;
+        }
+      }
+    </style>
   </head>
   <body>
+    <div
+      id="boot-loader"
+      role="status"
+      aria-live="polite"
+      aria-label="Chargement de TamTam Annonces"
+    >
+      <img class="boot-logo" src="/logo-tamtam.png" alt="" aria-hidden="true" />
+      <div class="boot-spinner"></div>
+      <p class="boot-text">Chargement de TamTam Annonces...</p>
+    </div>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Filet de sécurité : si le JS principal ne répond pas, on retire
+      // l'écran de démarrage après 8 s pour ne jamais bloquer le site.
+      window.setTimeout(function () {
+        var el = document.getElementById('boot-loader');
+        if (el) el.classList.add('is-hidden');
+      }, 8000);
+    </script>
   </body>
 </html>
