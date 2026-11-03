@@ -17,6 +17,7 @@ export const AppDownloadModal = ({ isOpen, onClose, appType = 'annonces' }) => {
       title: 'TAMTAM Annonces',
       subtitle: 'Lancez vos spots publicitaires et touchez des milliers de passagers au quotidien.',
       playLink: playStoreLinks.annonces,
+      webLink: 'https://app.tamtam-annonces.com/',
       qrCodeUrl: `https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(playStoreLinks.annonces)}&color=2e274e&bgcolor=ffffff`
     },
     driver: {
@@ -85,7 +86,7 @@ export const AppDownloadModal = ({ isOpen, onClose, appType = 'annonces' }) => {
                   onClick={() => setPlatform('android')}
                   className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-lg text-xs font-bold transition-all ${
                     platform === 'android'
-                      ? 'bg-[#aa9a56] text-[#2e274e] shadow'
+                      ? 'bg-[#aa9a56] text-[#2e274e]'
                       : 'text-slate-300 hover:text-white'
                   }`}
                 >
@@ -96,7 +97,7 @@ export const AppDownloadModal = ({ isOpen, onClose, appType = 'annonces' }) => {
                   onClick={() => setPlatform('ios')}
                   className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-lg text-xs font-bold transition-all ${
                     platform === 'ios'
-                      ? 'bg-[#aa9a56] text-[#2e274e] shadow'
+                      ? 'bg-[#aa9a56] text-[#2e274e]'
                       : 'text-slate-300 hover:text-white'
                   }`}
                 >
@@ -131,7 +132,7 @@ export const AppDownloadModal = ({ isOpen, onClose, appType = 'annonces' }) => {
                       href={currentApp.playLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full flex items-center justify-center gap-3 bg-[#aa9a56] hover:bg-[#b8a966] text-[#2e274e] font-bold py-3.5 px-5 rounded-xl transition-all duration-200 shadow-md text-sm active:scale-95"
+                      className="w-full flex items-center justify-center gap-3 bg-[#aa9a56] hover:bg-[#b8a966] text-[#2e274e] font-bold py-3.5 px-5 rounded-xl transition-all duration-200 text-sm active:scale-95"
                     >
                       <svg className="w-5 h-5 fill-current shrink-0" viewBox="0 0 512 512">
                         <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l220.7-221.3 60.1 60.1L104.6 499z"/>
@@ -173,6 +174,22 @@ export const AppDownloadModal = ({ isOpen, onClose, appType = 'annonces' }) => {
                     </form>
                   )}
                 </motion.div>
+              )}
+
+              {/* 3e bouton — accès web immédiat (même onglet) */}
+              {currentApp.webLink && (
+                <a
+                  href={currentApp.webLink}
+                  className="mt-5 flex w-full items-center justify-center gap-3 rounded-xl bg-[var(--gold)] px-5 py-3.5 text-sm font-bold text-[var(--navy-900)] transition-all duration-200 hover:bg-[var(--gold-400)] active:scale-95"
+                >
+                  <svg className="h-5 w-5 shrink-0 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                  </svg>
+                  <span className="text-left">
+                    <span className="block text-[10px] font-semibold leading-none opacity-80">via le web</span>
+                    <span className="mt-1 block text-sm font-extrabold leading-tight">Commencer la diffusion</span>
+                  </span>
+                </a>
               )}
 
             </div>

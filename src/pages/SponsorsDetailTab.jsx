@@ -54,7 +54,7 @@ export const SponsorsDetailTab = ({ onNavigate }) => {
             <div className="pt-2 flex flex-wrap gap-4">
               <button
                 onClick={handleCTA}
-                className="bg-[#aa9a56] hover:bg-[#aa9a56]/90 text-[#2e274e] font-extrabold px-8 py-4 rounded-2xl text-sm transition-all shadow-xl cursor-pointer flex items-center gap-2"
+                className="bg-[#aa9a56] hover:bg-[#aa9a56]/90 text-[#2e274e] font-extrabold px-8 py-4 rounded-2xl text-sm transition-all cursor-pointer flex items-center gap-2"
               >
                 <span>Devenir Sponsor Officiel</span>
                 <MaterialIcon name="north_east" className="text-lg" />
@@ -199,7 +199,7 @@ export const SponsorsDetailTab = ({ onNavigate }) => {
           <div className="pt-4 flex justify-center sm:justify-start">
             <button
               onClick={handleCTA}
-              className="bg-[#aa9a56] hover:bg-[#aa9a56]/90 text-[#2e274e] font-extrabold px-8 py-4 rounded-xl text-sm transition-all shadow-lg cursor-pointer inline-flex items-center gap-3"
+              className="bg-[#aa9a56] hover:bg-[#aa9a56]/90 text-[#2e274e] font-extrabold px-8 py-4 rounded-xl text-sm transition-all cursor-pointer inline-flex items-center gap-3"
             >
               <span>Devenir Sponsor Maintenant</span>
               <MaterialIcon name="arrow_forward" className="text-lg" />
@@ -219,7 +219,7 @@ export const SponsorsDetailTab = ({ onNavigate }) => {
           </div>
           <button
             onClick={handleCTA}
-            className="bg-[#2e274e] hover:bg-[#201b38] text-white font-extrabold px-8 py-4 rounded-2xl text-sm transition-all shadow-xl cursor-pointer whitespace-nowrap"
+            className="bg-[#2e274e] hover:bg-[#201b38] text-white font-extrabold px-8 py-4 rounded-2xl text-sm transition-all cursor-pointer whitespace-nowrap"
           >
             Demander une offre sponsor
           </button>

@@ -89,7 +89,7 @@ export const AudienceTabs = ({ onNavigate }) => {
             <button
               type="button"
               onClick={() => handleRedirect(activeCard)}
-              className="inline-flex items-center gap-3 border-2 border-[#aa9a56] bg-[#aa9a56]/10 hover:bg-[#aa9a56] text-white hover:text-[#2e274e] px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 group cursor-pointer"
+              className="inline-flex items-center gap-3 bg-[#aa9a56]/15 hover:bg-[#aa9a56] text-white hover:text-[#2e274e] px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 group cursor-pointer"
             >
               <span>Découvrir l'offre</span>
               <MaterialIcon name="north_east" className="text-base group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -154,7 +154,7 @@ export const AudienceTabs = ({ onNavigate }) => {
               <button
                 type="button"
                 onClick={handlePrev}
-                className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 active:scale-95 text-white transition-all cursor-pointer"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/15 active:scale-95 text-white transition-all cursor-pointer"
                 aria-label="Précédent"
               >
                 <MaterialIcon name="arrow_back" className="text-lg" />
@@ -162,7 +162,7 @@ export const AudienceTabs = ({ onNavigate }) => {
               <button
                 type="button"
                 onClick={handleNext}
-                className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 active:scale-95 text-white transition-all cursor-pointer"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/15 active:scale-95 text-white transition-all cursor-pointer"
                 aria-label="Suivant"
               >
                 <MaterialIcon name="arrow_forward" className="text-lg" />

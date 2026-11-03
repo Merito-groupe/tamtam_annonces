@@ -72,7 +72,7 @@ export const Footer = ({ onNavigate, onTabChange }) => {
   ];
 
   return (
-    <footer className="bg-white border-t border-slate-200 text-slate-600 py-12 px-4 sm:px-8 mt-20">
+    <footer className="bg-[var(--canvas)] border-t border-[var(--line)] text-slate-600 py-12 px-4 sm:px-8 mt-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-8">
 
         {/* 1. MARQUE & LIENS RAPIDES */}
@@ -142,7 +142,7 @@ export const Footer = ({ onNavigate, onTabChange }) => {
                 key={item.id}
                 type="button"
                 onClick={() => handleAction(item.key)}
-                className="w-full text-left p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors flex items-center gap-3 group text-slate-800 border border-slate-200 cursor-pointer"
+                className="w-full text-left p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors flex items-center gap-3 group text-slate-800 cursor-pointer"
               >
                 <div className="p-1.5 rounded-lg bg-[#2e274e]/10 text-[#2e274e] group-hover:bg-[#2e274e] group-hover:text-white transition-colors shrink-0">
                   <MaterialIcon name={item.icon} className="text-lg" />
@@ -158,34 +158,48 @@ export const Footer = ({ onNavigate, onTabChange }) => {
         </div>
 
         {/* 3. TÉLÉCHARGER L'APP */}
-        <div className="space-y-3 lg:col-span-2">
+        <div className="space-y-3 lg:col-span-2 min-w-0">
           <h4 className="text-xs font-bold text-[#2e274e] uppercase tracking-wider">Télécharger l'App</h4>
-          <div className="flex flex-col gap-2.5">
+          <div className="flex flex-col gap-2.5 min-w-0">
 
             <a
               href="https://play.google.com/store/apps/details?id=com.merito.tamtam_admin&pcampaignid=web_share"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 bg-[#2e274e] hover:bg-[#3d3466] text-white px-4 py-2.5 rounded-xl transition-all duration-200 shadow-md font-bold text-sm active:scale-95"
+              className="flex items-center gap-3 min-w-0 bg-[#2e274e] hover:bg-[#3d3466] text-white px-4 py-2.5 rounded-xl transition-all duration-200 font-bold text-sm active:scale-95"
             >
               <svg className="w-5 h-5 fill-current shrink-0" viewBox="0 0 512 512">
                 <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l220.7-221.3 60.1 60.1L104.6 499z"/>
               </svg>
-              <div className="text-left">
+              <div className="text-left min-w-0">
                 <div className="text-[9px] uppercase font-semibold text-slate-300 leading-none">Disponible sur</div>
                 <div className="text-xs font-extrabold leading-tight">Google Play</div>
               </div>
             </a>
 
-            <div className="flex items-center gap-3 bg-slate-100 border border-slate-200 text-slate-600 px-4 py-2.5 rounded-xl select-none opacity-80">
+            <div className="flex items-center gap-3 min-w-0 bg-slate-100 text-slate-600 px-4 py-2.5 rounded-xl select-none opacity-80">
               <svg className="w-5 h-5 fill-current opacity-70 shrink-0" viewBox="0 0 384 512">
                 <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-13.9 69.5-34.3z"/>
               </svg>
-              <div className="text-left">
+              <div className="text-left min-w-0">
                 <div className="text-[9px] uppercase font-semibold text-[#aa9a56]">Disponible très bientôt</div>
                 <div className="text-xs font-bold leading-tight text-slate-700">App Store (iOS)</div>
               </div>
             </div>
+
+            {/* 3e bouton : accès web immédiat (même onglet) */}
+            <a
+              href="https://app.tamtam-annonces.com/"
+              className="flex items-center gap-3 min-w-0 bg-[var(--gold)] hover:bg-[var(--gold-400)] text-[var(--navy-900)] px-4 py-2.5 rounded-xl transition-all duration-200 font-bold text-sm active:scale-95"
+            >
+              <svg className="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+              </svg>
+              <div className="text-left min-w-0">
+                <div className="text-[9px] font-semibold opacity-80 leading-none">via le web</div>
+                <div className="text-xs font-extrabold leading-tight">Commencer</div>
+              </div>
+            </a>
 
           </div>
         </div>

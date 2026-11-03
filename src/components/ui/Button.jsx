@@ -15,10 +15,10 @@ export const Button = ({
   const baseStyles = 'relative inline-flex items-center justify-center font-medium rounded-xl px-6 py-3 text-sm transition-all duration-300 focus:outline-none';
 
   const variants = {
-    primary: 'bg-[#aa9a56] text-[#2e274e] font-semibold hover:bg-[#b8a966] shadow-lg shadow-[#aa9a56]/20',
-    secondary: 'bg-[#2e274e] text-white hover:bg-[#38305f] border border-[#aa9a56]/30',
-    outline: 'border border-[#aa9a56] text-[#aa9a56] hover:bg-[#aa9a56] hover:text-[#2e274e]',
-    glass: 'bg-[#2e274e]/60 backdrop-blur-md border border-[#aa9a56]/30 text-white hover:border-[#aa9a56] hover:bg-[#2e274e]/80'
+    primary: 'bg-[#aa9a56] text-[#2e274e] font-semibold hover:bg-[#b8a966]',
+    secondary: 'bg-white/10 text-white hover:bg-white/15',
+    outline: 'bg-[#aa9a56]/12 text-[#aa9a56] hover:bg-[#aa9a56] hover:text-[#2e274e]',
+    glass: 'bg-white/10 backdrop-blur-md text-white hover:bg-white/15'
   };
 
   return (

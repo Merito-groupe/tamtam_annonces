@@ -1,7 +1,16 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { MaterialIcon } from '../components/ui/MaterialIcon';
 import { BackLink } from '../components/ui/BackLink';
+
+const FIELD =
+  'h-14 w-full rounded-2xl border border-[var(--line-strong)] bg-white pl-4 text-[15px] text-[var(--ink)] placeholder:text-[var(--text-4)] transition-colors duration-200 hover:border-[var(--gold-400)] focus:border-[var(--gold-500)] focus:outline-none focus:ring-4 focus:ring-[rgba(217,172,78,0.18)]';
+
+const LINK =
+  'rounded-md text-[13px] font-medium text-[var(--text-3)] underline decoration-[var(--line-strong)] underline-offset-4 transition-colors duration-200 hover:text-[var(--navy)] hover:decoration-[var(--gold-500)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[rgba(217,172,78,0.25)]';
+
+const LINK_ON_DARK =
+  'rounded-md font-medium text-[var(--gold-300)] underline decoration-[rgba(242,219,166,0.4)] underline-offset-4 transition-colors duration-200 hover:text-white hover:decoration-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[rgba(228,189,98,0.35)]';
 
 export const LoginPage = ({ onNavigate }) => {
   const [email, setEmail] = useState('');
@@ -69,97 +78,83 @@ export const LoginPage = ({ onNavigate }) => {
   };
 
   return (
-    <div className="min-h-screen bg-[#2e274e] flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8">
-      {/* Container principal */}
-      <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        
-        {/* Bouton retour */}
+    <div className="min-h-screen bg-[#2e274e] px-4 py-12 sm:px-6 sm:py-20">
+      <div className="mx-auto w-full max-w-[420px]">
+
+        {/* Retour */}
         <BackLink
           onClick={() => onNavigate && onNavigate('Home')}
           label="Retour au site"
-          className="mb-6"
+          tone="dark"
         />
 
-        {/* Logo et Titre */}
-        <div className="text-center">
-          <button 
-            type="button"
-            className="inline-flex items-center gap-3 cursor-pointer group mb-2 bg-transparent border-0 text-left focus:outline-none"
-            onClick={() => onNavigate && onNavigate('Home')}
-          >
-            <img 
-              src="/logo-tamtam.png" 
-              alt="TAMTAM Logo" 
-              className="h-12 w-auto object-contain group-hover:scale-105 transition-transform" 
-            />
-            <span className="text-2xl font-black text-white tracking-wider">
-              TAMTAM
-            </span>
-          </button>
-          <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight mt-2">
+        {/* Titre d'intention */}
+        <div className="mt-6">
+          <h1 className="text-[2rem] font-extrabold leading-[1.08] tracking-[-0.03em] text-white">
             Connexion
-          </h2>
-          <p className="mt-1 text-xs sm:text-sm text-slate-300">
+          </h1>
+          <p className="mt-2 text-[15px] leading-[1.6] text-white/60">
             Accédez à votre espace sécurisé.
           </p>
         </div>
-      </div>
 
-      {/* Formulaire de connexion */}
-      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-white py-8 px-6 shadow-2xl rounded-2xl sm:px-10 text-slate-800">
-          
-          {/* Message d'erreur */}
+        {/* Carte formulaire */}
+        <div className="mt-8 rounded-[20px] border border-[var(--line)] bg-white p-6 shadow-[var(--shadow-md)] sm:p-8">
+
           {error && (
-            <div role="alert" className="mb-4 p-3 rounded-xl bg-rose-50 border border-rose-200 text-rose-600 text-xs font-medium flex items-center gap-2">
-              <MaterialIcon name="error_outline" className="text-base shrink-0" />
+            <div
+              role="alert"
+              className="mb-5 flex items-start gap-2 rounded-xl bg-[var(--danger-bg)] px-4 py-3 text-[13px] font-medium leading-[1.5] text-[var(--danger-strong)]"
+            >
+              <MaterialIcon name="error" className="mt-px text-base" />
               <span>{error}</span>
             </div>
           )}
 
           <form className="space-y-5" onSubmit={handleSubmit}>
-            
-            {/* Champ Email */}
+
+            {/* E-mail */}
             <div>
-              <label htmlFor="email" className="block text-xs font-bold text-[#2e274e] uppercase tracking-wider mb-1">
-                Identifiant / E-mail
+              <label
+                htmlFor="email"
+                className="mb-2 block text-[13px] font-semibold text-[var(--navy)]"
+              >
+                E-mail
               </label>
-              <div className="relative rounded-xl shadow-sm">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
-                  <MaterialIcon name="mail_outline" className="text-lg" />
-                </div>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autoComplete="username"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="nom@exemple.com"
-                  className="block w-full pl-10 pr-3 py-2.5 border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2e274e] focus:border-transparent transition-all placeholder:text-slate-400"
-                />
-              </div>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autoComplete="username"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="nom@exemple.com"
+                className={`${FIELD} pr-4`}
+              />
             </div>
 
-            {/* Champ Mot de passe */}
+            {/* Mot de passe */}
             <div>
-              <div className="flex items-center justify-between mb-1">
-                <label htmlFor="password" className="block text-xs font-bold text-[#2e274e] uppercase tracking-wider">
+              <div className="mb-2 flex items-center justify-between gap-3">
+                <label
+                  htmlFor="password"
+                  className="block text-[13px] font-semibold text-[var(--navy)]"
+                >
                   Mot de passe
                 </label>
                 <button
                   type="button"
-                  onClick={() => alert('Veuillez contacter le support pour réinitialiser votre mot de passe.')}
-                  className="text-xs text-[#aa9a56] hover:underline font-semibold cursor-pointer"
+                  onClick={() =>
+                    alert('Veuillez contacter le support pour réinitialiser votre mot de passe.')
+                  }
+                  className={LINK}
                 >
-                  Oublié ?
+                  Mot de passe oublié ?
                 </button>
               </div>
-              <div className="relative rounded-xl shadow-sm">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
-                  <MaterialIcon name="lock_outline" className="text-lg" />
-                </div>
+
+              <div className="relative">
                 <input
                   id="password"
                   name="password"
@@ -169,57 +164,75 @@ export const LoginPage = ({ onNavigate }) => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
-                  className="block w-full pl-10 pr-10 py-2.5 border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2e274e] focus:border-transparent transition-all placeholder:text-slate-400"
+                  className={`${FIELD} pr-12`}
                 />
+
                 <button
                   type="button"
-                  aria-label={showPassword ? "Masquer le mot de passe" : "Afficher le mot de passe"}
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-600 cursor-pointer"
+                  aria-label={showPassword ? 'Masquer le mot de passe' : 'Afficher le mot de passe'}
+                  aria-pressed={showPassword}
+                  onClick={() => setShowPassword((value) => !value)}
+                  className="absolute right-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full text-[var(--text-3)] transition-colors hover:bg-[var(--surface-3)] hover:text-[var(--navy)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[rgba(217,172,78,0.3)]"
                 >
-                  <MaterialIcon name={showPassword ? 'visibility_off' : 'visibility'} className="text-lg" />
+                  <MaterialIcon
+                    name={showPassword ? 'visibility_off' : 'visibility'}
+                    className="text-xl"
+                  />
                 </button>
               </div>
             </div>
 
-            {/* Google reCAPTCHA v2 */}
-            <div className="flex justify-center my-4 overflow-x-auto">
-              <ReCAPTCHA
-                ref={recaptchaRef}
-                sitekey={SITE_KEY}
-                onChange={handleCaptchaChange}
-                onExpired={handleCaptchaExpired}
-                onError={handleCaptchaExpired}
-              />
+            {/* reCAPTCHA */}
+            <div className="overflow-x-auto">
+              <div className="flex justify-center py-1">
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey={SITE_KEY}
+                  onChange={handleCaptchaChange}
+                  onExpired={handleCaptchaExpired}
+                  onError={handleCaptchaExpired}
+                />
+              </div>
             </div>
 
-            {/* Bouton Valider */}
-            <div>
-              <button
-                type="submit"
-                disabled={loading || !captchaToken}
-                className="w-full flex justify-center items-center gap-2 py-3 px-4 border border-transparent rounded-xl shadow-md text-sm font-bold text-white bg-[#2e274e] hover:bg-[#3d3466] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#2e274e] transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {loading ? (
-                  <>
-                    <svg className="animate-spin h-4 w-4 text-white" viewBox="0 0 24 24" fill="none">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                    </svg>
-                    <span>Vérification...</span>
-                  </>
-                ) : (
-                  <>
-                    <span>Se connecter</span>
-                    <MaterialIcon name="arrow_forward" className="text-base" />
-                  </>
-                )}
-              </button>
-            </div>
+            {/* Action principale */}
+            <button
+              type="submit"
+              disabled={loading || !captchaToken}
+              aria-busy={loading}
+              className="inline-flex h-14 w-full items-center justify-center gap-2 rounded-2xl bg-[var(--navy)] px-6 text-[15px] font-semibold text-white transition-all duration-200 hover:bg-[var(--navy-700)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[rgba(228,189,98,0.35)] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              {loading ? (
+                <>
+                  <svg className="h-4 w-4 animate-spin text-white" viewBox="0 0 24 24" fill="none">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    />
+                  </svg>
+                  <span>Vérification…</span>
+                </>
+              ) : (
+                <span>Se connecter</span>
+              )}
+            </button>
 
           </form>
-
         </div>
+
+        {/* Métadonnées */}
+        <p className="mt-6 text-center text-[12.5px] leading-[1.6] text-white/55">
+          Accès réservé aux comptes TAMTAM.{' '}
+          <a
+            href="mailto:contact@tamtam-annonces.com"
+            className={LINK_ON_DARK}
+          >
+            Besoin d’aide ?
+          </a>
+        </p>
+
       </div>
     </div>
   );

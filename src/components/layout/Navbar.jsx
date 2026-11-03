@@ -62,14 +62,14 @@ export const Navbar = ({ onNavigate, onTabChange }) => {
   ];
 
   return (
-    <header className="sticky top-0 z-40 w-full px-4 sm:px-8 py-3">
+    <header className="sticky top-0 z-40 w-full px-4 sm:px-8 py-3 bg-[#2e274e]">
       <div className="max-w-7xl mx-auto bg-[#2e274e]/80 backdrop-blur-md border border-[#aa9a56]/30 rounded-2xl px-4 sm:px-6 py-2.5 flex items-center justify-between shadow-2xl shadow-black/40">
         
         {/* GAUCHE : Dropdown "Je voudrai" */}
         <div className="hidden md:block relative" ref={jeVoudraisRef}>
           <button
             onClick={() => setIsJeVoudraisOpen(!isJeVoudraisOpen)}
-            className="bg-[#aa9a56] hover:bg-[#b8a966] text-[#2e274e] font-bold px-4 py-2 rounded-xl transition-all duration-200 flex items-center gap-2 shadow-md hover:shadow-[#aa9a56]/20 text-sm"
+            className="bg-[#aa9a56] hover:bg-[#b8a966] text-[#2e274e] font-bold px-4 py-2 rounded-xl transition-all duration-200 flex items-center gap-2 text-sm"
           >
             <MaterialIcon name="tune" className="text-lg" />
             <span>Je voudrai</span>
@@ -137,7 +137,7 @@ export const Navbar = ({ onNavigate, onTabChange }) => {
           <div className="relative" ref={contactRef}>
             <button
               onClick={() => setIsContactOpen(!isContactOpen)}
-              className="bg-white/10 hover:bg-white/15 text-white border border-white/15 px-4 py-2 rounded-xl font-medium text-sm transition-all flex items-center gap-2"
+              className="bg-white/10 hover:bg-white/15 text-white px-4 py-2 rounded-xl font-medium text-sm transition-all flex items-center gap-2"
             >
               <MaterialIcon name="support_agent" className="text-lg text-[#aa9a56]" />
               <span>Contactez-nous</span>

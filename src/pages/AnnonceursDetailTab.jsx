@@ -185,14 +185,14 @@
 //             <div className="pt-2 flex flex-wrap items-center gap-4">
 //               <button
 //                 onClick={handleCTA}
-//                 className="bg-[#aa9a56] hover:bg-[#aa9a56]/90 text-[#2e274e] font-extrabold px-8 py-4 rounded-2xl text-sm transition-all shadow-xl cursor-pointer flex items-center gap-2 hover:scale-105"
+//                 className="bg-[#aa9a56] hover:bg-[#aa9a56]/90 text-[#2e274e] font-extrabold px-8 py-4 rounded-2xl text-sm transition-all cursor-pointer flex items-center gap-2 hover:scale-105"
 //               >
 //                 <span>Lancer une campagne maintenant</span>
 //                 <MaterialIcon name="north_east" className="text-lg" />
 //               </button>
 //               <button
 //                 onClick={handleBack}
-//                 className="bg-white/5 hover:bg-white/10 text-white font-bold px-6 py-4 rounded-2xl text-sm border border-white/10 transition-all cursor-pointer"
+//                 className="bg-white/10 hover:bg-white/15 text-white font-bold px-6 py-4 rounded-2xl text-sm transition-all cursor-pointer"
 //               >
 //                 Découvrir les offres
 //               </button>
@@ -375,7 +375,7 @@
           
 //           <button
 //             onClick={handleCTA}
-//             className="bg-[#2e274e] hover:bg-[#201b38] text-white font-extrabold px-8 py-4 rounded-2xl text-sm transition-all shadow-xl cursor-pointer whitespace-nowrap hover:scale-105"
+//             className="bg-[#2e274e] hover:bg-[#201b38] text-white font-extrabold px-8 py-4 rounded-2xl text-sm transition-all cursor-pointer whitespace-nowrap hover:scale-105"
 //           >
 //             Lancer une campagne maintenant
 //           </button>
@@ -446,14 +446,14 @@ export const AnnonceursDetailTab = ({ onNavigate }) => {
             <div className="pt-2 flex flex-wrap items-center gap-4">
               <button
                 onClick={handleCTA}
-                className="bg-[#aa9a56] hover:bg-[#aa9a56]/90 text-[#2e274e] font-extrabold px-8 py-4 rounded-2xl text-sm transition-all shadow-xl cursor-pointer flex items-center gap-2 hover:scale-105"
+                className="bg-[#aa9a56] hover:bg-[#aa9a56]/90 text-[#2e274e] font-extrabold px-8 py-4 rounded-2xl text-sm transition-all cursor-pointer flex items-center gap-2 hover:scale-105"
               >
                 <span>Lancer une campagne maintenant</span>
                 <MaterialIcon name="north_east" className="text-lg" />
               </button>
               <button
                 onClick={handleBack}
-                className="bg-white/5 hover:bg-white/10 text-white font-bold px-6 py-4 rounded-2xl text-sm border border-white/10 transition-all cursor-pointer"
+                className="bg-white/10 hover:bg-white/15 text-white font-bold px-6 py-4 rounded-2xl text-sm transition-all cursor-pointer"
               >
                 Voir les autres offres
               </button>
@@ -716,7 +716,7 @@ export const AnnonceursDetailTab = ({ onNavigate }) => {
           
           <button
             onClick={handleCTA}
-            className="bg-[#2e274e] hover:bg-[#201b38] text-white font-extrabold px-8 py-4 rounded-2xl text-sm transition-all shadow-xl cursor-pointer whitespace-nowrap hover:scale-105"
+            className="bg-[#2e274e] hover:bg-[#201b38] text-white font-extrabold px-8 py-4 rounded-2xl text-sm transition-all cursor-pointer whitespace-nowrap hover:scale-105"
           >
             Lancer une campagne maintenant
           </button>

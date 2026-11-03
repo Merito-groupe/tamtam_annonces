@@ -22,7 +22,7 @@ export const ChauffeursPage = ({ onOpenDownloadModal, onBack }) => {
           </p>
           <button
             onClick={() => onOpenDownloadModal('driver')}
-            className="inline-flex items-center gap-3 bg-[#aa9a56] hover:bg-[#b8a966] text-[#2e274e] px-6 py-3.5 rounded-xl text-sm font-bold shadow-lg transition-all"
+            className="inline-flex items-center gap-3 bg-[#aa9a56] hover:bg-[#b8a966] text-[#2e274e] px-6 py-3.5 rounded-xl text-sm font-bold transition-all"
           >
             <MaterialIcon name="directions_car" className="text-lg" />
             <span>Télécharger TAMTAM Driver</span>

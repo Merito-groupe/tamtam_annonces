@@ -93,7 +93,7 @@ export const ChauffeursDetailTab = ({ onNavigate }) => {
           </div>
           <button 
             type="button"
-            className="w-full sm:w-auto bg-[#aa9a56] hover:bg-[#aa9a56]/90 text-[#2e274e] font-extrabold px-8 py-3.5 rounded-xl text-sm transition-all shadow-lg cursor-pointer"
+            className="w-full sm:w-auto bg-[#aa9a56] hover:bg-[#aa9a56]/90 text-[#2e274e] font-extrabold px-8 py-3.5 rounded-xl text-sm transition-all cursor-pointer"
           >
             Télécharger TAMTAM Driver
           </button>
